@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Sponsors | Team Rudra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="website icon" type="png" href="./images/logo1.png">
+  <style>
+    .fade-slide {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+    .fade-slide.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slow-spin {
+      animation: spin 2.5s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-[#1f2937] text-white">
+
+  <!-- Loading Spinner -->
+  <div id="loader" class="fixed inset-0 bg-[#1f2937] flex justify-center items-center z-50">
+    <div class="w-16 h-16 border-4 border-red-400 border-t-transparent rounded-full slow-spin"></div>
+  </div>
+
+    <header class="flex justify-between items-center relative shadow-lg px-4 py-2 bg-transparent">
+    <div class="flex items-center">
+      <img src="./images/logo1.png" alt="" class="w-24 h-24">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent ml-2">
+        𝐓𝖾αꭑ 𝐑υᑯ𝗋α
+      </h1>
+    </div>
+
+   <div class="hidden md:flex text-white gap-8 mr-10">
+  <div class="relative group cursor-pointer">
+    <a href="index.html" class="hover:text-yellow-400">Home</a>
+    <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+  </div>
+  <div class="relative group cursor-pointer">
+    <a href="vehicle.html" class="hover:text-yellow-400">Vehicle</a>
+    <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+  </div>
+  <div class="relative group cursor-pointer">
+    <a href="faculty.html" class="hover:text-yellow-400">Faculty</a>
+    <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+  </div>
+  <div class="relative group cursor-pointer">
+    <a href="./sponsor.html" class="hover:text-yellow-400">Sponsors</a>
+    <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+  </div>
+  <div class="relative group cursor-pointer">
+    <a href="team.html" class="hover:text-yellow-400">Team Members</a>
+    <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+  </div>
+  <div class="relative group cursor-pointer">
+    <a href="./Contact.html" class="hover:text-yellow-400">Contact Us</a>
+    <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+  </div>
+</div>
+
+
+    <div class="md:hidden flex flex-col justify-end gap-1 cursor-pointer" onclick="toggleMenu()">
+      <span class="h-[3px] w-6 bg-white rounded"></span>
+      <span class="h-[3px] w-6 bg-white rounded"></span>
+      <span class="h-[3px] w-6 bg-white rounded"></span>
+    </div>
+  </header>
+
+  <section class="max-w-6xl mx-auto px-4 py-10 hidden" id="main-content">
+    <h1 class="text-4xl font-extrabold text-center text-red-400 mb-10 fade-slide">Our Sponsors</h1>
+    <div id="sponsor-list" class="space-y-10"></div>
+  </section>
+
+  <script>
+    const sponsors = [
+      {
+        title: "Solidworks",
+        description: "SolidWorks has empowered Team Rudra with full access to its premium CAD software suite, enabling us to design every component of our Formula Student race car with industrial-level precision. From intricate part modeling to complex assemblies and detailed manufacturing drawings — SolidWorks is the backbone of our design phase.",
+        slogan: "From imagination to creation — SolidWorks makes our vision race-ready.",
+        image: "./images/solidworks.webp"
+      },
+      {
+        title: "Ansys",
+        description: "With ANSYS as our simulation partner, we’re pushing the limits of engineering validation. The team utilizes ANSYS’s powerful FEA and CFD tools to analyze structural integrity, optimize aerodynamics, and validate real-world performance — before a single part is manufactured.",
+        slogan: "Engineering with confidence — ANSYS helps us test without limits.",
+        image: "./images/Ansys.webp"
+      },
+      {
+        title: "BRR Foundation",
+        description: "The BRR Foundation believed in our potential when this was just an ambitious student dream. As our first financial sponsor, their support helped us procure essential raw materials and initiate fabrication. Their backing lit the fuse to our project’s momentum.",
+        slogan: "BRR Foundation didn't just fund us — they accelerated a vision.",
+        image: "./images/brr.jpg"
+      }
+    ];
+
+    const sponsorList = document.getElementById('sponsor-list');
+
+    sponsors.forEach((sponsor, index) => {
+      const item = document.createElement('div');
+      const reverseClass = index % 2 !== 0 ? 'md:flex-row-reverse' : '';
+
+      item.className = `
+        flex flex-col md:flex-row ${reverseClass}
+        bg-[#2d3748] rounded-lg overflow-hidden shadow-lg
+        transition duration-500 ease-in-out transform
+        hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(255,99,132,0.5)]
+        fade-slide
+      `;
+
+      item.innerHTML = `
+        <div class="md:w-1/2 flex flex-col justify-center p-6">
+          <h2 class="text-2xl font-bold text-red-400 mb-4">${sponsor.title}</h2>
+          <p class="text-gray-300 mb-4">${sponsor.description}</p>
+          <blockquote class="italic text-red-300">"${sponsor.slogan}"</blockquote>
+        </div>
+        <div class="md:w-1/2 flex justify-center items-center bg-black">
+          <img src="${sponsor.image}" alt="${sponsor.title} Image"
+               class="w-[551px] h-[220px] object-contain rounded">
+        </div>
+      `;
+
+      sponsorList.appendChild(item);
+    });
+
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const mainContent = document.getElementById('main-content');
+      loader.style.display = 'none';
+      mainContent.classList.remove('hidden');
+
+      const animatedItems = document.querySelectorAll('.fade-slide');
+      animatedItems.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('show');
+        }, index * 400);
+      });
+    });
+  </script>
+
+</body>
+</html>

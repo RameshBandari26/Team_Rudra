@@ -8,7 +8,12 @@
   <link rel="website icon" type="png" href="logo1.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome CDN -->
+
 
   <style>
     .loader {
@@ -99,7 +104,178 @@
 }
 
 
+/* footer section starts */
 
+.footer {
+  background-color: #252525;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+  width: 60vw;
+  padding: 1rem;
+}
+
+
+/* Make the iframe responsive */
+.content iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  min-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 0;
+}
+
+/* Optional: Contact info styling */
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #050f71;
+}
+
+.content p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.content p i {
+  color: #ffae00;
+  margin-right: 0.5rem;
+}
+
+/* Responsive stacking on smaller devices */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    width: 90vw; /* allow more space on smaller screens */
+    padding: 1rem;
+  }
+
+  .content > div {
+    width: 100%; /* each block takes full width */
+  }
+
+  .content iframe {
+    min-width: 100%;
+  }
+}
+
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer .box {
+  flex: 1 1 300px;
+}
+
+.footer .box h3 {
+  font-size: 1.8rem;
+  color: #ffae00;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.footer .box p,
+.footer .box a {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.footer .box a i {
+  color: #ffae00;
+  margin-right: 0.5rem;
+}
+
+/* Share icons */
+.footer .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer .share a {
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background: #eee;
+  color: #02094b;
+  transition: all 0.3s ease;
+}
+
+.footer .share a:hover {
+  background: transparent;
+  transform: scale(1.1);
+  border: 1px solid #ffae00;
+  color: #ffae00;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer .box-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .share {
+    justify-content: center;
+  }
+}
+
+    /* Scroll to top button */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      display: none;
+      z-index: 50;
+      background-color: #ffae00;
+      color: #000;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 174, 0, 0.7);
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #ffc633;
+    }
   </style>
 </head>
 
@@ -109,7 +285,7 @@
     <div class="loader"></div>
   </div>
 
-  <header class="flex justify-between items-center relative shadow-lg px-4 py-2 bg-transparent">
+  <header class="flex justify-between items-center relative shadow-lg px-4 bg-transparent">
   <div class="flex items-center">
     <img src="./images/logo1.png" alt="" class="w-28 h-28"> <!-- Increased logo size -->
     <h1 class="text-4xl font-extrabold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent ml-3"> <!-- Increased text size -->
@@ -152,14 +328,15 @@
 </header>
 
 
-  <div class="hidden flex-col bg-black text-white w-full py-4 text-center space-y-4" id="navMenu">
-    <h3>Home</h3>
-    <h3>Vehicle</h3>
-    <h3>Faculty</h3>
-    <h3>Sponsors</h3>
-    <h3>Team Members</h3>
-    <h3>Contact Us</h3>
-  </div>
+  <div class="hidden flex flex-col bg-transparent text-white w-full py-4 pr-4 text-end space-y-4" id="navMenu">
+  <a href="index.html" class="hover:text-yellow-400">Home</a>
+  <a href="./vehicle.html" class="hover:text-yellow-400">Vehicle</a>
+  <a href="./facultyInfo.html" class="hover:text-yellow-400">Faculty</a>
+  <a href="./sponsor.html" class="hover:text-yellow-400">Sponsors</a>
+  <a href="team.html" class="hover:text-yellow-400">Team Members</a>
+  <a href="./Contact.html" class="hover:text-yellow-400">Contact Us</a>
+</div>
+
 
   <div class="relative w-full h-[800px] -mt-32 z-[-1]">
     <video autoplay muted loop class="w-full h-full object-cover">
@@ -174,9 +351,9 @@
     <div class="relative p-10 bg-gray-900 flex justify-center items-center flex-col w-full">
       <h1 class="text-4xl font-bold text-red-400 mb-6 text-center">About Us</h1>
       <p class="text-gray-300 text-justify leading-8 text-xl max-w-5xl">
-        We are Team Rudra, the official Formula Student team from Rajiv Gandhi University of Knowledge Technologies (RGUKT), Basar. As Mechanical Engineering students, we are proudly designing and building the university’s first-ever Formula prototype car to compete in FFS INDIA 2025 (Season 6).
-        <br><br>
-        Our journey represents more than just engineering—it’s about innovation, teamwork, and turning knowledge into action. Join us as we pave the way for a new era of student-led motorsports at RGUKT Basar.
+        We are Team Rudra, the first-ever Formula Student team from RGUKT Basar, built by 27 passionate and self-driven mechanical engineering students under the guidance of Dr. V. Chandra Sekhara Rao.
+        With a deep focus on innovation, teamwork, and technical excellence, we're designing and building a high-performance formula-style race car to proudly represent our institute at FFS India 2025.
+         Driven by curiosity. Defined by commitment.
       </p>
       <a href="about.html" class="inline-block mt-8 px-8 py-3 bg-blue-800 text-white font-semibold rounded-full shadow-md hover:bg-blue-600 transition transform hover:scale-110 animate-pulse">
         Know More
@@ -187,21 +364,21 @@
 </section>
 
 
-<section class="bg-black py-10 flex justify-center items-center">
+<section class="bg-black py-10 flex justify-center items-center" data-aos="fade-up">
   <div class="flex flex-col md:flex-row bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden max-w-7xl transform transition hover:rotate-y-2 hover:shadow-cyan-500/50 relative light-glow">
 
     <div class="relative p-4 bg-gray-900 flex justify-center items-center flex-col min-w-[350px] max-w-[450px]">
       <div class="relative w-[350px] rounded-lg overflow-hidden">
-        <img src="./images/image.png" alt="Profile Photo" class="w-[350px] rounded-lg">
+        <img src="./images/faculty.png" alt="Profile Photo" class="w-[350px] rounded-lg">
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-40"></div>
       </div>
-      <h1 class="text-lg font-bold text-red-400 mt-2 text-center">Dr. V. Chandra Sekhara Rao P</h1>
+      <h1 class="text-lg font-bold text-red-600 mt-2 text-center">Dr. V. Chandra Sekhara Rao P</h1>
       <h1 class="text-sm text-white text-center">Associate Dean of Academics & Planning, RGUKT Basar</h1>
     </div>
 
     <div class="flex-1 p-6 text-white">
-      <p class="text-gray-300 text-justify leading-10 text-lg">
-        
+      <h1 class="text-4xl font-bold text-[#f97316] mb-6 text-center"> Guidance</h1>
+      <p class="text-gray-300 text-justify leading-9 text-lg">
         Our journey is supported by the constant guidance of our faculty mentor, Dr. V. Chandra Sekhara Rao (Ph.D., IIT Madras) — Associate Professor of Mechanical Engineering at RGUKT Basar.
 
 From technical reviews to team strategy, he plays a key role in shaping our project at every stage. With a strong research background in polymer composites, fracture mechanics, and renewable materials, he brings deep academic insight into real-world problem solving.
@@ -216,7 +393,7 @@ He’s not just our advisor —
 
 > “He’s the steady force behind us — guiding, believing, and helping us transform challenges into learning.”
       </p>
-      <a href="facultyInfo.html" class="inline-block mt-4 px-6 py-2 bg-red-400 text-white rounded-full font-semibold hover:scale-110 transition shadow-lg animate-pulse">
+      <a href="facultyInfo.html" class="inline-block mt-4 px-6 py-2 bg-red-600 text-white rounded-full font-semibold hover:scale-110 transition shadow-lg animate-pulse">
         Know More
       </a>
     </div>
@@ -226,7 +403,7 @@ He’s not just our advisor —
 
 
 
-<section class="bg-black text-white py-10">
+<section class="bg-black text-white py-10" data-aos="fade-up">
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="text-3xl font-extrabold text-center mb-4">Sponsors</h2>
     <div class="flex flex-col md:flex-row bg-gray-800 rounded-lg shadow-lg overflow-hidden glowing-box">
@@ -237,13 +414,18 @@ He’s not just our advisor —
           Our journey is built on passion, resourcefulness, and technical excellence—but our sponsors are the force that turn our vision into reality.<br>
           💡 With your support, we don’t just build a car — we engineer futures.
         </p>
-        <div class="flex gap-4 justify-center flex-nowrap overflow-x-auto">
-          <a href="./sponsor.html" class="text-orange-400 border border-orange-400 px-4 py-2 rounded hover:bg-orange-400 hover:text-black font-semibold transition whitespace-nowrap">Sponsors</a>
-          <a href="./ContactSponsor.html" class="text-orange-400 border border-orange-400 px-4 py-2 rounded hover:bg-orange-400 hover:text-black font-semibold transition whitespace-nowrap">Contact Us for Sponsorship</a>
-          <a href="https://drive.google.com/uc?export=download&id=1LfKxVVbTMgwuu4bj8jRVMRavBYC6lhqY" class="text-orange-400 border border-orange-400 px-4 py-2 rounded hover:bg-orange-400 hover:text-black font-semibold transition whitespace-nowrap">
-            Download Brochure
-          </a>
-        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap mt-4">
+  <a href="./sponsor.html" class="text-orange-400 border border-orange-400 px-4 py-2 rounded hover:bg-orange-400 hover:text-black font-semibold transition text-center">
+    Sponsors
+  </a>
+  <a href="./ContactSponsor.html" class="text-orange-400 border border-orange-400 px-4 py-2 rounded hover:bg-orange-400 hover:text-black font-semibold transition text-center">
+    Contact Us for Sponsorship
+  </a>
+  <a href="https://drive.google.com/uc?export=download&id=1LfKxVVbTMgwuu4bj8jRVMRavBYC6lhqY" class="text-orange-400 border border-orange-400 px-4 py-2 rounded hover:bg-orange-400 hover:text-black font-semibold transition text-center">
+    Download Brochure
+  </a>
+</div>
+
       </div>
       <div class="flex-1">
         <img src="./images/sponsor.jpg" alt="Sponsor Image" class="w-full h-full object-cover">
@@ -254,41 +436,88 @@ He’s not just our advisor —
 
 
 
-  <section class="bg-[#252525] text-white py-8">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-col md:flex-row justify-between items-start">
-        <div>
-          <h3 class="text-yellow-400 font-semibold text-xl mb-4">Contact Info</h3>
-          <p><i class="fas fa-phone text-yellow-400"></i> +91 9121804018</p>
-          <p><i class="fas fa-envelope text-yellow-400"></i> ryanaboinasomanath@gmail.com</p>
-          <p><i class="fas fa-map-marked-alt text-yellow-400"></i> Telangana, India-503102</p>
+   <section class="footer" data-aos="fade-up">
+  
+      <div class="box-container">
+  
+  
+        <div class="box">
+          <div class="content">
+  
+            <div>
+  
+              <h3>contact info</h3>
+              <p> <i class="fas fa-phone"></i> +91 9121156180</p>
+              <p> <i class="fas fa-envelope"></i> teamrudraracers@gmail.com</p>
+              <p> <i class="fas fa-map-marked-alt"></i> Telangana, India-503102</p>
+            </div>
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.124610906872!2d77.91919617524557!3d18.8815522822834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcde18c82d2cdb1%3A0x469505d0e802dd0c!2sBasara%20IIIT%20Campus!5e0!3m2!1sen!2sin!4v1744135506823!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <hr class="h-[2px] bg-[#444444] border-none my-8">
+
+          <div class="share">
+          
+  
+            <a href="https://www.linkedin.com/company/teamrudra/" class="fab fa-linkedin"
+              aria-label="LinkedIn" target="_blank"></a>
+             <!-- <a href="https://www.youtube.com/" class="fab fa-youtube" aria-label="YouTube" target="_blank"></a> -->
+
+            <a onclick="location.href='mailto:teamrudraracers@gmail.com'" class="fas fa-envelope" aria-label="Mail"
+              target="_blank"></a>
+            <a href="https://www.instagram.com/team_rudra2k25?igsh=MWkwM2MxbmZ4MWdjdw==" class="fab fa-instagram"
+              aria-label="Instagram" target="_blank"></a>
+  
+          </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="400" height="250" class="rounded-lg shadow-lg mt-6 md:mt-0"></iframe>
       </div>
-      <hr class="my-6 border-gray-600">
-      <div class="flex justify-center space-x-4">
-        <a href="#" class="text-blue-500 text-2xl"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-gray-300 text-2xl"><i class="fab fa-github"></i></a>
-        <a href="#" class="text-red-400 text-2xl"><i class="fas fa-envelope"></i></a>
-        <a href="#" class="text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('hidden');
+      <!-- Scroll To Top Button -->
+  <div id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 1200 });
+
+  // Loader removal after page load with fade-out effect
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loading-screen');
+    loader.style.transition = 'opacity 0.5s ease';
+
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500); // Wait for fade-out to finish
+    }, 1000); // Loader stays visible for at least 1 second
+  });
+
+  // Scroll To Top Button Logic
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.onscroll = () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
     }
+  };
 
-    window.addEventListener('load', () => {
-      document.getElementById('loading-screen').style.display = 'none';
-    });
-  </script>
+  scrollBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 1000 });
-  </script>
+  // Hamburger Menu Toggle
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('hidden');
+  }
+</script>
+
 </body>
 
 </html>

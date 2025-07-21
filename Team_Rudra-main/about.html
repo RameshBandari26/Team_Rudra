@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Rudra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-slide {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-slide.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .spin-slow {
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-6">
+
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-black flex justify-center items-center z-50">
+    <div class="w-16 h-16 border-4 border-[#d02919] border-t-transparent rounded-full spin-slow"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="fade-slide hidden max-w-4xl text-center space-y-6">
+
+    <p class="text-xl font-medium">
+      Team Rudra is the official Formula Student team of Rajiv Gandhi University of Knowledge Technologies (RGUKT), Basar, formed by a passionate group of 27 mechanical engineering students with a shared vision — to design and build the institute’s first-ever Formula Student race car and compete at FFS India 2025, a premier national-level competition hosted by FMAE.
+      What began as a student initiative has grown into a full-fledged technical project, powered by determination, teamwork, and hands-on learning. We have already completed our design phase, fabricated our custom space frame chassis, and are now advancing into component manufacturing and system integration.
+      Organized into 12 dedicated sub-teams, we cover every core domain of the vehicle — from drivetrain and suspension to simulation, testing, and team operations. Every component and decision is developed in-house, driven by the core belief that the best learning happens when we build it ourselves.
+    </p>
+
+    <div>
+      <h2 class="text-4xl font-serif mb-2 text-[#d02919]">Our Vision</h2>
+      <p class="text-xl font-medium">
+        Team Rudra is more than a racing project — it’s a journey of engineering transformation, leadership, and innovation. We aim to become a benchmark for self-driven technical excellence, and to inspire thousands of students from similar backgrounds to chase ambitious goals and shape the future through engineering.
+      </p>
+      <p class="text-xl font-medium mt-4">
+        We’re not just trying to compete — we’re trying to create something that will outlive us and light the path for the next generation of rural innovators.
+      </p>
+      <p class="text-4xl font-serif mt-4 text-[#d02919]">
+        Faculty Guide:
+      </p><br>
+      Dr. V. Chandra Sekhara Rao<br>
+      (Ph.D., IIT Madras) — Associate Professor & Team Advisor
+    </div>
+
+    <div>
+      <h2 class="text-4xl font-serif mb-2 text-[#d02919]">What Defines Us</h2>
+      <p class="text-xl font-medium">
+        Representing a rural innovation movement, bringing motorsport engineering into new frontiers<br>
+        Guided by a “learn by doing” mindset — where engineering is not just studied, but applied<br>
+        We believe in the power of student-led projects to turn limitations into launchpads<br>
+        We represent the spirit and capability of 10,000+ students at RGUKT Basar, showing what youth can achieve when trusted with tools and a vision
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('main-content');
+
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => {
+          loader.style.display = 'none';
+          content.classList.remove('hidden');
+          setTimeout(() => {
+            content.classList.add('show');
+          }, 100);
+        }, 500);
+      }, 700);
+    });
+  </script>
+
+</body>
+</html>

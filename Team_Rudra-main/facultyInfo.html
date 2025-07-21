@@ -5,99 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Faculty - Dr. V. Chandra Sekhara Rao P</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-slide {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-slide.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .slow-spin {
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body class="bg-[#0f172a] text-white font-sans min-h-screen">
 
-  <!-- Header -->
-  <header class="flex justify-between items-center shadow-lg px-4 py-3">
-    <div class="flex items-center">
-      <img src="./images/logo1.png" alt="Logo" class="w-24 h-24">
-      <h1 class="text-3xl font-extrabold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent ml-3">
-        𝐓𝖾αꭑ 𝐑υᑯ𝗋α
-      </h1>
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-[#0f172a] flex justify-center items-center z-50">
+    <div class="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full slow-spin"></div>
+  </div>
+
+  <div id="main-content" class="fade-slide hidden">
+
+    <!-- Header -->
+   <header class="flex justify-between items-center relative shadow-lg px-4 bg-transparent">
+  <div class="flex items-center">
+    <img src="./images/logo1.png" alt="" class="w-28 h-28"> <!-- Increased logo size -->
+    <h1 class="text-4xl font-extrabold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent ml-3"> <!-- Increased text size -->
+      𝐓𝖾αꭑ 𝐑υᑯ𝗋α
+    </h1>
+  </div>
+
+  <div class="hidden md:flex text-white gap-10 mr-10 text-lg font-semibold"> <!-- Optional: slightly larger menu text -->
+    <div class="relative group cursor-pointer">
+      <a href="index.html" class="hover:text-yellow-400">Home</a>
+      <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
     </div>
-
-    <nav class="hidden md:flex gap-8 mr-10 text-lg font-medium">
-      <a href="index.html" class="relative group hover:text-yellow-400">Home
-        <span class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform transform -translate-x-1/2 duration-300"></span>
-      </a>
-      <a href="./vehicle.html" class="relative group hover:text-yellow-400">Vehicle</a>
-      <a href="./facultyInfo.html" class="relative group hover:text-yellow-400">Faculty</a>
-      <a href="./sponsor.html" class="relative group hover:text-yellow-400">Sponsors</a>
-      <a href="team.html" class="relative group hover:text-yellow-400">Team Members</a>
-      <a href="./Contact.html" class="relative group hover:text-yellow-400">Contact Us</a>
-    </nav>
-  </header>
-
-  <!-- Content -->
-  <div class="max-w-7xl mx-auto px-4 py-10">
-
-    <!-- Profile Header -->
-    <div class="flex flex-col md:flex-row items-center md:items-start mb-2">
-      <div class="flex-1">
-        <h1 class="text-4xl font-bold text-red-400 mb-4">Dr. V. Chandra Sekhara Rao P</h1>
-        <p class="text-gray-300 mb-6 text-justify md:max-w-3xl">
-          Dr. V. Chandra Sekhara Rao P is an esteemed academician with over 11 years of experience in mechanical engineering. 
-          He earned his Ph.D. from IIT Madras, focusing on the "Mechanical, Fracture, and Durability Characteristics of Polymer Composites with Variations in Micro Fillers, Macro Fillers, and Fibers." 
-          Since joining RGUKT in 2016, he has held significant roles including Assistant Professor and Former Controller of Examinations.
-        </p> 
-         
-    
-      </div>
-      <img src="./images/faculty.png" alt="Dr. Rao Photo" class="w-60 h-60 rounded-full object-cover border-4 border-gray-700 shadow-xl ml-0 md:ml-10 mt-6 md:mt-0">
+    <div class="relative group cursor-pointer">
+      <a href="./vehicle.html" class="hover:text-yellow-400">Vehicle</a>
+      <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
     </div>
-   
-     
-    <!-- Sections -->
-    <div class="space-y-8 text-gray-200">
-
-      <div>
-        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research and Projects</h2>
-        <p>Dr. Rao has led impactful research, notably a ₹12 lakh DSIR-sponsored project developing cost-effective, high-strength construction materials using recycled waste plastic.</p>
-      </div>
-
-      <div>
-        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Publications and Conferences</h2>
-        <p>He has published work in leading journals such as <em>Construction and Building Materials</em> and <em>Materials Today: Proceedings</em>, and has presented at several national and international conferences.</p>
-      </div>
-
-      <div>
-        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Academic and Administrative Roles</h2>
-        <p>At RGUKT, Dr. Rao has served as:</p>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li>Controller of Examinations</li>
-          <li>Interim Head of the Mechanical Engineering Department</li>
-          <li>Coordinator, Innovation and Entrepreneurship Development Cell</li>
-        </ul>
-        <p class="mt-2">He has mentored student teams who achieved national recognition in events like the Smart India Hackathon.</p>
-      </div>
-
-      <div>
-        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research Interests</h2>
-        <ul class="list-disc pl-5 mt-2 space-y-1">
-          <li>High Strength High Performance Structural Materials</li>
-          <li>Fracture Mechanics</li>
-          <li>Polymer Matrix Composites</li>
-          <li>Non-Destructive Testing</li>
-          <li>Renewable Energy Sources</li>
-        </ul>
-      </div>
-
-      
-      <p class="pt-4">
-        For a detailed profile, visit the 
-        <a href="https://www.rgukt.ac.in/me-faculty-chandrashekhar.html" class="text-yellow-400 underline hover:text-yellow-500">RGUKT website</a>.
-      </p>
+    <div class="relative group cursor-pointer">
+      <a href="./facultyInfo.html" class="hover:text-yellow-400">Faculty</a>
+      <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
     </div>
-    <div>
+    <div class="relative group cursor-pointer">
+      <a href="./sponsor.html" class="hover:text-yellow-400">Sponsors</a>
+      <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+    </div>
+    <div class="relative group cursor-pointer">
+      <a href="team.html" class="hover:text-yellow-400">Team Members</a>
+      <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+    </div>
+    <div class="relative group cursor-pointer">
+      <a href="./Contact.html" class="hover:text-yellow-400">Contact Us</a>
+      <div class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300 transform -translate-x-1/2"></div>
+    </div>
+  </div>
+
+  <div class="md:hidden flex flex-col justify-end gap-1 cursor-pointer" onclick="toggleMenu()">
+    <span class="h-[3px] w-6 bg-white rounded"></span>
+    <span class="h-[3px] w-6 bg-white rounded"></span>
+    <span class="h-[3px] w-6 bg-white rounded"></span>
+  </div>
+</header>
+
+
+  <div class="hidden flex flex-col bg-transparent text-white w-full py-4 pr-4 text-end space-y-4" id="navMenu">
+  <a href="index.html" class="hover:text-yellow-400">Home</a>
+  <a href="./vehicle.html" class="hover:text-yellow-400">Vehicle</a>
+  <a href="./facultyInfo.html" class="hover:text-yellow-400">Faculty</a>
+  <a href="./sponsor.html" class="hover:text-yellow-400">Sponsors</a>
+  <a href="team.html" class="hover:text-yellow-400">Team Members</a>
+  <a href="./Contact.html" class="hover:text-yellow-400">Contact Us</a>
+</div>
+
+
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-4 py-10">
+
+      <!-- Profile Header -->
+      <div class="flex flex-col md:flex-row items-center md:items-start mb-2">
+        <div class="flex-1">
+          <h1 class="text-4xl font-bold text-red-400 mb-4">Dr. V. Chandra Sekhara Rao P</h1>
+          <p class="text-gray-300 mb-6 text-justify md:max-w-3xl">
+            Dr. V. Chandra Sekhara Rao P is an esteemed academician with over 11 years of experience in mechanical engineering. 
+            He earned his Ph.D. from IIT Madras, focusing on the "Mechanical, Fracture, and Durability Characteristics of Polymer Composites with Variations in Micro Fillers, Macro Fillers, and Fibers." 
+            Since joining RGUKT in 2016, he has held significant roles including Assistant Professor and Former Controller of Examinations.
+          </p> 
+        </div>
+        <img src="./images/faculty.png" alt="Dr. Rao Photo" class="w-60 h-60 rounded-full object-cover border-4 border-gray-700 shadow-xl ml-0 md:ml-10 mt-6 md:mt-0">
+      </div>
+
+      <!-- Sections -->
+      <div class="space-y-8 text-gray-200">
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research and Projects</h2>
+          <p>Dr. Rao has led impactful research, notably a ₹12 lakh DSIR-sponsored project developing cost-effective, high-strength construction materials using recycled waste plastic.</p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Publications and Conferences</h2>
+          <p>He has published work in leading journals such as <em>Construction and Building Materials</em> and <em>Materials Today: Proceedings</em>, and has presented at several national and international conferences.</p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Academic and Administrative Roles</h2>
+          <p>At RGUKT, Dr. Rao has served as:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Controller of Examinations</li>
+            <li>Interim Head of the Mechanical Engineering Department</li>
+            <li>Coordinator, Innovation and Entrepreneurship Development Cell</li>
+          </ul>
+          <p class="mt-2">He has mentored student teams who achieved national recognition in events like the Smart India Hackathon.</p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research Interests</h2>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>High Strength High Performance Structural Materials</li>
+            <li>Fracture Mechanics</li>
+            <li>Polymer Matrix Composites</li>
+            <li>Non-Destructive Testing</li>
+            <li>Renewable Energy Sources</li>
+          </ul>
+        </div>
+
+        <p class="pt-4">
+          For a detailed profile, visit the 
+          <a href="https://www.rgukt.ac.in/me-faculty-chandrashekhar.html" class="text-yellow-400 underline hover:text-yellow-500">RGUKT website</a>.
+        </p>
+      </div>
+
       <div class="text-2xl font-bold text-center px-4 mt-10">
-      “Our faculty didn’t build the car — they built the mindset. The mindset to question, to create, <br>
+        “Our faculty didn’t build the car — they built the mindset. The mindset to question, to create, <br>
         to own every inch of this machine.”
-    </div>
-     
+      </div>
+
     </div>
 
   </div>
+
+  <!-- Script -->
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('main-content');
+
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => {
+          loader.style.display = 'none';
+          content.classList.remove('hidden');
+          setTimeout(() => {
+            content.classList.add('show');
+          }, 100);
+        }, 500);
+      }, 700);
+    });
+
+     // Hamburger Menu Toggle
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('hidden');
+  }
+  </script>
 
 </body>
 </html>

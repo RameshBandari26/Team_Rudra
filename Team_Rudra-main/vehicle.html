@@ -1,0 +1,259 @@
+<html>
+<head>  <title>Vehicle</title> 
+
+  <link rel="stylesheet" href="vehicle.css">
+</head>
+<body >
+
+
+  <div class="header">
+    <div class="head-rudra">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+      <img src="./images/logo1.png" alt="" class="logo" />
+      <h1>𝐓𝖾αꭑ 𝐑υᑯ𝗋α</h1>
+    </div>
+  
+    <!-- Hamburger Icon (Only shown on small screens) -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <!-- Navigation Links -->
+    <div class="nav" id="navMenu">
+      <div class="home" onclick="location.href='index.html'"><h3>Home</h3></div>
+      <div class="vehicle" onclick="location.href='vehicle.html'"><h3>Vehicle</h3></div>
+      <div class="faculty" onclick="location.href='./facultyInfo.html'"><h3>Faculty</h3></div>
+      <div class="sponsors" onclick="location.href='./sponsor.html'"><h3>Sponsors</h3></div>
+      <div class="member"><h3>Team Members</h3></div>
+      <div class="contactUs" onclick="location.href='./Contact.html' "><h3>Contact Us</h3></div>
+    </div>
+  </div>
+  
+
+
+  <div class="main">
+    <h1 class="dept">DEPARTMENTS</h1>
+    <div class="row">
+      <div class="card">
+        <h2>Aerodynamics</h2>
+        <img src="./images/vehicle/aro.jpg" alt="aerodynamic" class="card-image">
+        <div class="names">
+          <p><b>The aerodynamics system optimizes airflow to enhance downforce, reduce drag, and improve stability.</b></p>
+       
+        </div>
+        <button class="info-btn">More Info</button>
+      </div>
+    
+      <div class="card">
+        <h2>Designing</h2>
+        <img src="./images/vehicle/design.jpg" alt="design" class="card-image">
+        <div class="names">
+          <p><b>The design department translates concepts into manufacturable, performance-driven components.</b></p>
+        
+        </div>
+        <button class="info-btn">More Info</button>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="card">
+        <h2>Braking</h2>
+        <img src="./images/vehicle/Engine.png" alt="engine" class="card-image">
+        <div class="names">
+          <p><b>The braking system ensures controlled deceleration and vehicle stability under all conditions.</b></p>
+       
+        </div>
+        <button class="info-btn">More Info</button>
+      </div>
+      
+    
+      <div class="card">
+        <h2>Suspension</h2>
+        <img src="./images/vehicle/wheel.jpg" alt="wheel" class="card-image">
+        <div class="names">
+          <p> <b>The suspension system manages the dynamic interaction between the vehicle and the road.</b></p>
+       
+        </div>
+        <button class="info-btn">More Info</button>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+    <div class="card">
+      <h2>Powertrain</h2>
+      <img src="./images/vehicle/B.jpg" alt="design" class="card-image">
+      <div class="names">
+        <p><b>The powertrain system delivers energy from the engine to the wheels with maximum efficiency.</b></p>
+      
+      </div>
+      <button class="info-btn">More Info</button>
+    </div>
+
+    <div class="card">
+      <h2>Drivetrain and Transmission</h2>
+      <img src="./images/vehicle/A.jpg" alt="design" class="card-image">
+      <div class="names">
+        <p><b>The drivetrain and transmission system transfers engine power efficiently to the driven wheels.</b></p>
+      
+      </div>
+      <button class="info-btn">More Info</button>
+    </div>
+  </div> 
+
+  <div class="row">
+    <div class="card">
+      <h2>Steering</h2>
+      <img src="./images/vehicle/st.jpg" alt="design" class="card-image">
+      <div class="names">
+        <p><b>Control starts with steering—the interface where precision engineering meets on-track performance</b></p>
+      
+      </div>
+      <button class="info-btn" onclick="">More Info</button>
+    </div>
+</div>
+</div>
+
+<script>
+  
+  const details = {
+    'Aerodynamics': `It includes components like front and rear wings, undertray, diffuser, and sidepods.
+    Downforce increases tire grip, allowing higher cornering speeds without compromising control.
+    Drag reduction improves acceleration and top speed by minimizing air resistance.
+    Computational Fluid Dynamics (CFD) is used to simulate and analyze flow behavior.
+    Designs are validated for pressure distribution, vortex control, and flow attachment.
+    The aerodynamic balance between front and rear is critical for predictable handling.
+    Material choice and manufacturing precision ensure structural integrity at high speeds.
+    Integration with cooling systems directs airflow for engine and brake temperature regulation.
+    Effective aero design significantly boosts performance, efficiency, and driver confidence on track.`,
+
+    'Designing': `Using CAD tools, it develops 3D models of every subsystem with precise tolerances.
+It ensures packaging efficiency, weight optimization, and structural compatibility.
+Finite Element Analysis (FEA) is used to validate strength, stiffness, and safety margins.
+Design decisions consider ergonomics, serviceability, and manufacturing feasibility.
+Interdepartmental coordination is crucial for integrating mechanical systems seamlessly.
+Tolerancing and GD&T ensure dimensional accuracy during fabrication and assembly.
+Iterative simulations guide design refinement before physical prototyping.
+Compliance with FSAE regulations is embedded throughout the design phase.
+The design process forms the blueprint that transforms ideas into a functional race car.`,
+
+    'Steering':`It comprises components like the steering wheel, column, rack-and-pinion, and tie rods.
+Designed to transmit input with minimal play, it ensures accurate response and feedback.
+Ackermann geometry is incorporated to optimize tire angles during cornering.
+The steering ratio defines how much the wheels turn in response to driver input.
+A low free play angle and efficient rack travel enhance handling performance.
+Universal joints and quick disconnects improve flexibility and safety.
+Material selection and alignment accuracy are critical for durability and responsiveness.
+The system plays a central role in stability, maneuverability, and dynamic control.
+At high speeds and tight corners, steering performance directly affects lap times and safety.`,
+
+   'Drivetrain and Transmission':`It comprises the clutch, gearbox, sprockets, chain, driveshafts, and differential.
+The transmission system allows gear ratio selection for optimal torque and speed delivery.
+A well-matched gear set maximizes acceleration while maintaining engine efficiency.
+The clutch facilitates smooth power engagement and disengagement during shifts.
+Chain and sprocket systems provide compact, lightweight, and efficient power transfer.
+The differential distributes torque between wheels, enabling stable cornering.
+Proper alignment and tensioning ensure minimal power losses and component wear.
+Gearbox and driveline durability are essential under high loads and race conditions.
+Together, these systems define the car’s responsiveness, traction, and overall drivability.`,
+
+'Suspension':`It includes components like control arms, dampers, springs, and uprights.
+Its primary role is to absorb shocks and maintain tire contact with the surface.
+Suspension geometry influences ride comfort, handling, and cornering stability.
+Camber, caster, and toe angles are carefully tuned for optimal performance.
+The system balances load transfer during acceleration, braking, and cornering.
+Adjustable dampers allow fine control over compression and rebound rates.
+Material strength and weight play a key role in maximizing efficiency and reliability.
+A well-designed suspension ensures predictable vehicle behavior under dynamic loads.
+It directly affects grip, driver confidence, and the car’s overall performance envelope.`,
+
+'Braking':`It consists of master cylinders, brake calipers, rotors, brake lines, and pedals.
+Its primary function is to convert kinetic energy into thermal energy through friction.
+Brake balance between front and rear axles is critical for stability and safety.
+Caliper selection and rotor sizing determine braking force and heat dissipation.
+Hydraulic efficiency ensures minimal response time and precise pedal feel.
+A proportioning valve adjusts pressure distribution for optimal control.
+Consistent braking performance is essential for high-speed track maneuvers.
+Material properties and cooling design affect fade resistance and durability.
+The system directly impacts lap times, driver confidence, and overall vehicle control.`,
+
+'Powertrain':`It comprises the engine, clutch, gearbox, chain/sprocket drive, and differential.
+Its primary function is to generate, transmit, and regulate mechanical power.
+Engine tuning determines torque delivery, throttle response, and peak performance.
+The gearbox selects optimal gear ratios for acceleration, speed, and fuel efficiency.
+Clutch design allows seamless engagement and disengagement under load.
+The differential ensures balanced power distribution during cornering.
+Minimizing drivetrain losses is essential for maximizing usable output.
+Thermal management and vibration control are critical for reliability.
+A well-engineered powertrain defines the vehicle’s acceleration, speed, and endurance.`,
+
+
+  };
+
+  function typeWriter(element, words, delay = 60, callback) {
+    let i = 0;
+    function addWord() {
+      if (i < words.length) {
+        element.innerHTML += words[i] + " ";
+        i++;
+        setTimeout(addWord, delay);
+      } else {
+        callback();
+      }
+    }
+    addWord();
+  }
+
+  document.querySelectorAll(".info-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const card = this.closest(".card");
+      const title = card.querySelector("h2").textContent.trim();
+      const text = details[title] || "Detailed information not available.";
+      const words = text.split(" ");
+
+      card.classList.add("expanded");
+
+      const infoDiv = document.createElement("div");
+      infoDiv.className = "extra-info";
+      const p = document.createElement("p");
+      infoDiv.appendChild(p);
+      card.appendChild(infoDiv);
+
+      typeWriter(p, words, 50, () => {
+        const closeBtn = document.createElement("button");
+        closeBtn.className = "close-btn";
+        closeBtn.innerText = "Close";
+        infoDiv.appendChild(closeBtn);
+
+        closeBtn.addEventListener("click", () => {
+          infoDiv.remove();
+          card.classList.remove("expanded");
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card, i) => {
+      setTimeout(() => {
+        card.classList.add("visible");
+      }, i * 3000); // 300ms delay between cards
+    });
+  });
+</script>
+
+
+
+
+
+</body>
+  
+</html>

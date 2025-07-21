@@ -1,162 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Faculty - Dr. V. Chandra Sekhara Rao P</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      line-height: 1.7;
-    }
-    body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #111;
-    height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-  }
-  
-  /* Wrapper covers the entire screen */
-  .wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Behind everything */
-    overflow: hidden;
-  }
-  
-  /* Common style for all spans (floating glowing dots) */
-  .wrapper span {
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: #10191f;
-    box-shadow: 0 0 30px #0072ff,
-                0 0 60px #0072ff,
-                0 0 90px #0072ff;
-    border-radius: 50%;
-    animation: animate 10s linear infinite;
-    opacity: 0;
-  }
-  
-  /* Individual span timing & position (keep as is, or tweak for variety) */
-  .wrapper span:nth-child(1) { left: 5%; animation-delay: 0s; }
-  .wrapper span:nth-child(2) { left: 15%; animation-delay: 2s; width: 60px; height: 60px; }
-  .wrapper span:nth-child(3) { left: 25%; animation-delay: 4s; }
-  .wrapper span:nth-child(4) { left: 35%; animation-delay: 1s; width: 80px; height: 80px; }
-  .wrapper span:nth-child(5) { left: 45%; animation-delay: 3s; }
-  .wrapper span:nth-child(6) { left: 55%; animation-delay: 6s; }
-  .wrapper span:nth-child(7) { left: 65%; animation-delay: 5s; width: 100px; height: 100px; }
-  .wrapper span:nth-child(8) { left: 75%; animation-delay: 7s; }
-  .wrapper span:nth-child(9) { left: 85%; animation-delay: 6s; width: 90px; height: 90px; }
-  .wrapper span:nth-child(10){ left: 95%; animation-delay: 8s; }
-  
-  @keyframes animate {
-    0% {
-      transform: translateY(100vh) rotate(0deg);
-      opacity: 0.8;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100vh) rotate(720deg);
-      opacity: 0;
-    }
-  }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #f87171;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-      color: #38bdf8;
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    a {
-      color: #facc15;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-[#0f172a] text-white font-sans min-h-screen">
 
-<body>
-  <div class="container">
-    <div class="wrapper">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    <h1>Dr. V. Chandra Sekhara Rao P</h1>
-    <p>Dr. V. Chandra Sekhara Rao P is an esteemed academician with over 11 years of experience in mechanical engineering. He earned his Ph.D. from IIT Madras, focusing on the "Mechanical, Fracture, and Durability Characteristics of Polymer Composites with Variations in Micro Fillers, Macro Fillers, and Fibers." Since joining RGUKT in 2016, he has held significant roles including Assistant Professor and Former Controller of Examinations.</p>
+  <!-- Header -->
+  <header class="flex justify-between items-center shadow-lg px-4 py-3">
+    <div class="flex items-center">
+      <img src="./images/logo1.png" alt="Logo" class="w-24 h-24">
+      <h1 class="text-3xl font-extrabold bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text text-transparent ml-3">
+        𝐓𝖾αꭑ 𝐑υᑯ𝗋α
+      </h1>
+    </div>
 
-    <h2>Research and Projects</h2>
-    <p>Dr. Rao has led impactful research, notably a ₹12 lakh DSIR-sponsored project developing cost-effective, high-strength construction materials using recycled waste plastic.</p>
+    <nav class="hidden md:flex gap-8 mr-10 text-lg font-medium">
+      <a href="index.html" class="relative group hover:text-yellow-400">Home
+        <span class="absolute bottom-[-5px] left-1/2 w-4/5 h-[3px] bg-cyan-400 scale-x-0 group-hover:scale-x-100 origin-center transition-transform transform -translate-x-1/2 duration-300"></span>
+      </a>
+      <a href="./vehicle.html" class="relative group hover:text-yellow-400">Vehicle</a>
+      <a href="./facultyInfo.html" class="relative group hover:text-yellow-400">Faculty</a>
+      <a href="./sponsor.html" class="relative group hover:text-yellow-400">Sponsors</a>
+      <a href="team.html" class="relative group hover:text-yellow-400">Team Members</a>
+      <a href="./Contact.html" class="relative group hover:text-yellow-400">Contact Us</a>
+    </nav>
+  </header>
 
-    <h2>Publications and Conferences</h2>
-    <p>He has published work in leading journals such as <em>Construction and Building Materials</em> and <em>Materials Today: Proceedings</em>, and has presented at several national and international conferences.</p>
+  <!-- Content -->
+  <div class="max-w-7xl mx-auto px-4 py-10">
 
-    <h2>Academic and Administrative Roles</h2>
-    <p>At RGUKT, Dr. Rao has served as:</p>
-    <ul>
-      <li>Controller of Examinations</li>
-      <li>Interim Head of the Mechanical Engineering Department</li>
-      <li>Coordinator, Innovation and Entrepreneurship Development Cell</li>
-    </ul>
-    <p>He has mentored student teams who achieved national recognition in events like the Smart India Hackathon.</p>
+    <!-- Profile Header -->
+    <div class="flex flex-col md:flex-row items-center md:items-start mb-2">
+      <div class="flex-1">
+        <h1 class="text-4xl font-bold text-red-400 mb-4">Dr. V. Chandra Sekhara Rao P</h1>
+        <p class="text-gray-300 mb-6 text-justify md:max-w-3xl">
+          Dr. V. Chandra Sekhara Rao P is an esteemed academician with over 11 years of experience in mechanical engineering. 
+          He earned his Ph.D. from IIT Madras, focusing on the "Mechanical, Fracture, and Durability Characteristics of Polymer Composites with Variations in Micro Fillers, Macro Fillers, and Fibers." 
+          Since joining RGUKT in 2016, he has held significant roles including Assistant Professor and Former Controller of Examinations.
+        </p> 
+         
+    
+      </div>
+      <img src="./images/faculty.png" alt="Dr. Rao Photo" class="w-60 h-60 rounded-full object-cover border-4 border-gray-700 shadow-xl ml-0 md:ml-10 mt-6 md:mt-0">
+    </div>
+   
+     
+    <!-- Sections -->
+    <div class="space-y-8 text-gray-200">
 
-    <h2>Research Interests</h2>
-    <ul>
-      <li>High Strength High Performance Structural Materials</li>
-      <li>Fracture Mechanics</li>
-      <li>Polymer Matrix Composites</li>
-      <li>Non-Destructive Testing</li>
-      <li>Renewable Energy Sources</li>
-    </ul>
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research and Projects</h2>
+        <p>Dr. Rao has led impactful research, notably a ₹12 lakh DSIR-sponsored project developing cost-effective, high-strength construction materials using recycled waste plastic.</p>
+      </div>
 
-    <p>For a detailed profile, visit the <a href="https://www.rgukt.ac.in/me-faculty-chandrashekhar.html">RGUKT website</a>.</p>
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Publications and Conferences</h2>
+        <p>He has published work in leading journals such as <em>Construction and Building Materials</em> and <em>Materials Today: Proceedings</em>, and has presented at several national and international conferences.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Academic and Administrative Roles</h2>
+        <p>At RGUKT, Dr. Rao has served as:</p>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>Controller of Examinations</li>
+          <li>Interim Head of the Mechanical Engineering Department</li>
+          <li>Coordinator, Innovation and Entrepreneurship Development Cell</li>
+        </ul>
+        <p class="mt-2">He has mentored student teams who achieved national recognition in events like the Smart India Hackathon.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research Interests</h2>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>High Strength High Performance Structural Materials</li>
+          <li>Fracture Mechanics</li>
+          <li>Polymer Matrix Composites</li>
+          <li>Non-Destructive Testing</li>
+          <li>Renewable Energy Sources</li>
+        </ul>
+      </div>
+
+      
+      <p class="pt-4">
+        For a detailed profile, visit the 
+        <a href="https://www.rgukt.ac.in/me-faculty-chandrashekhar.html" class="text-yellow-400 underline hover:text-yellow-500">RGUKT website</a>.
+      </p>
+    </div>
+    <div>
+      <div class="text-2xl font-bold text-center px-4 mt-10">
+      “Our faculty didn’t build the car — they built the mindset. The mindset to question, to create, <br>
+        to own every inch of this machine.”
+    </div>
+     
+    </div>
+
   </div>
-</body>
 
+</body>
 </html>

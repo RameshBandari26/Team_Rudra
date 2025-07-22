@@ -16,6 +16,25 @@ body {
 }
 
 .team-title {
+  font-family: 'Orbitron', sans-se/* Base Setup */
+}
+body {
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TEAM HEADER */
+.team-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.team-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
   color: #d02919;
@@ -41,7 +60,7 @@ body {
 
 .flip-box-large {
   background-color: transparent;
-  width: 100vw;
+  width: 90vw;
   max-width: 1000px;
   height: 500px;
   perspective: 1500px;
@@ -195,7 +214,6 @@ body {
   width: 100%;
   max-width: 1200px;
   text-align: center;
-  margin-left: 80px;
 }
 
 .grid-title {
@@ -288,3 +306,335 @@ body {
   margin-bottom: 0.5rem;
 }
 
+rif;
+  font-size: 3rem;
+  color: #d02919;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.team-banner img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* Highlight Section - Big Image Flip Box */
+.highlight-member {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.flip-box-large {
+  background-color: transparent;
+  width: 90vw;
+  max-width: 1000px;
+  height: 500px;
+  perspective: 1500px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-box-large:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(252, 244, 244, 0.15);
+  background: #2c333c;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-box-front {
+  z-index: 2;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+  text-align: left;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.6;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.flip-box-back h2 {
+  font-size: 1.4rem;
+  color: #facc15;
+  margin-bottom: 1rem;
+}
+
+.flip-box-back blockquote {
+  font-style: italic;
+  color: #93c5fd;
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.flip-box-back strong {
+  color: #22d3ee;
+}
+
+.highlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* Members Row */
+.members-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.profile-box-hover {
+  position: relative;
+  width: 560px;
+  height: 360px;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: all 0.5s ease;
+}
+
+.profile-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #000;
+}
+
+.profile-info {
+  width: 50%;
+  height: 100%;
+  padding: 0.0rem;
+  box-sizing: border-box;
+  color: #fff;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.5s ease;
+  font-size: 0.90rem;
+  line-height: 1.6;
+}
+
+.profile-box-hover:hover .profile-img {
+  width: 50%;
+  left: 50%;
+}
+
+.profile-box-hover:hover .profile-img img {
+  border-radius: 0 12px 12px 0;
+}
+
+.profile-box-hover:hover .profile-info {
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────
+   🔸 Crew Grid Section for 25 Animated Flip Boxes
+───────────────────────────────────────────── */
+.grid-section {
+  margin-top: 6rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.grid-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #d02919;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+/* Flip Box Outer */
+.flip-box {
+  perspective: 1000px;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+/* Inner Flip Container */
+.flip-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-box:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Faces */
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  /* box-sizing: border-box; */
+}
+
+.flip-front {
+  background-color: #1e293b;
+  color: white;
+}
+
+.flip-back {
+  background-color: #0f172a;
+  color: rgb(221, 175, 8);
+  transform: rotateY(180deg);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Optional animation when appearing */
+@keyframes flip-2-ver-right-bck {
+  0% {
+    transform: translateX(0) translateZ(0) rotateY(0);
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform: translateX(100%) translateZ(-260px) rotateY(180deg);
+    transform-origin: 0% 50%;
+  }
+}
+.member-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+/* Style for Hamburger Icon */
+/* Show hamburger icon only on small screens */
+/* Default desktop styles */
+.nav {
+  display: flex;
+  justify-content: flex-end;   /* ✅ Aligns nav items to the right */
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background: none;            /* ✅ No background */
+  border: none;                /* ✅ Remove border */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Nav item text */
+.nav div h3,
+.nav div a h3 {
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 8px 12px;
+}
+
+/* Hamburger icon (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #111;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav div {
+    padding: 15px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

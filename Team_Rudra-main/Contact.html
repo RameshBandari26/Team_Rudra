@@ -58,15 +58,20 @@
     </div>
   </div>
 
-  <div class="md:hidden flex flex-col justify-end gap-1 cursor-pointer" onclick="toggleMenu()">
-    <span class="h-[3px] w-6 bg-white rounded"></span>
-    <span class="h-[3px] w-6 bg-white rounded"></span>
-    <span class="h-[3px] w-6 bg-white rounded"></span>
-  </div>
+<!-- Hamburger Icon (only visible on mobile) -->
+<div class="md:hidden flex flex-col justify-center items-end gap-1 cursor-pointer" onclick="toggleMenu()">
+  <span class="block bg-white"></span>
+  <span class="block bg-white">-</span>
+  <span class="block bg-white"></span>
+</div>
+
+
+
 </header>
 
 
-  <div class="hidden flex flex-col bg-transparent text-white w-full py-4 pr-4 text-end space-y-4" id="navMenu">
+  <!-- Mobile Navigation Menu -->
+<div id="navMenu" class="hidden md:hidden flex-col bg-transparent text-white w-full py-4 pr-4 text-end space-y-4">
   <a href="index.html" class="hover:text-yellow-400">Home</a>
   <a href="./vehicle.html" class="hover:text-yellow-400">Vehicle</a>
   <a href="./GuidingAthu.html" class="hover:text-yellow-400">Guide Authorities</a>
@@ -74,6 +79,7 @@
   <a href="./teamMembers.html" class="hover:text-yellow-400">Team Members</a>
   <a href="./Contact.html" class="hover:text-yellow-400">Contact Us</a>
 </div>
+
 
 
   <!-- Contact Section -->
@@ -144,11 +150,12 @@
   </section>
 
   <script>
-     // Hamburger Menu Toggle
   function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('hidden');
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('hidden');
   }
-  </script>
+</script>
+
 
 </body>
 </html>

@@ -1,139 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="website icon" type="png" href="./images/logo1.png">
-  <title>Faculty - Dr. V. Chandra Sekhara Rao P | Team Rudra</title>
+  <meta charset="UTF-8">
+  <title>Dr. V. Chandra Sekhara Rao - Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="website icon" type="png" href="./images/logo1.png">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    .fade-slide {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    .fade-slide.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .slow-spin {
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111827;
     }
   </style>
 </head>
-<body class="bg-[#0f172a] text-white font-sans min-h-screen">
+<body class="text-white">
 
-  <!-- Loader -->
-  <div id="loader" class="fixed inset-0 bg-[#0f172a] flex justify-center items-center z-50">
-    <div class="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full slow-spin"></div>
-  </div>
+  <div class="max-w-7xl mx-auto px-4 py-10">
 
-  <div id="main-content" class="fade-slide hidden">
-
-
-
-    <!-- Content -->
-    <div class="max-w-7xl mx-auto px-4 py-10">
-
-      <!-- Profile Header -->
-      <div class="flex flex-col md:flex-row items-center md:items-start mb-2">
-        <div class="flex-1">
-          <h1 class="text-4xl font-bold text-red-400 mb-4">Dr. V. Chandra Sekhara Rao P</h1>
-          <p class="text-gray-300 mb-6 text-justify md:max-w-3xl">
-            Dr. V. Chandra Sekhara Rao P is an esteemed academician with over 11 years of experience in mechanical engineering. 
-            He earned his Ph.D. from IIT Madras, focusing on the "Mechanical, Fracture, and Durability Characteristics of Polymer Composites with Variations in Micro Fillers, Macro Fillers, and Fibers." 
-            Since joining RGUKT in 2016, he has held significant roles including Assistant Professor and Former Controller of Examinations.
-          </p> 
-        </div>
-        <img src="./images/faculty.png" 
+    <!-- Profile Header -->
+    <div class="flex flex-col md:flex-row items-center md:items-start mb-2">
+      <div class="flex-1">
+        <h1 class="text-4xl font-bold text-red-400 mb-4">Dr. V. Chandra Sekhara Rao</h1>
+        <p class="text-gray-300 mb-6 text-justify md:max-w-3xl">
+          Faculty Mentor – Dr. V. Chandra Sekhara Rao (Ph.D., IIT Madras) <br><br>
+          Dr. V. Chandra Sekhara Rao, Associate Professor at RGUKT Basar and mentor of Team Rudra, is much more than a faculty advisor — he’s the backbone of our vision and execution. With a Ph.D. from IIT Madras and a Management Essentials certification from IIM Shillong, he combines deep technical expertise with strategic foresight.
+        </p>
+      </div>
+      <img src="./images/faculty.png" 
      alt="Dr. Rao Photo"
      class="w-60 h-60 rounded-full object-cover shadow-xl ml-0 md:ml-10 mt-6 md:mt-0 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_#3b82f6]">
+    </div>
 
-      </div>
+    <!-- Sections -->
+    <div class="space-y-8 text-gray-200">
 
-      <!-- Sections -->
-      <div class="space-y-8 text-gray-200">
-        <div>
-          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research and Projects</h2>
-          <p>Dr. Rao has led impactful research, notably a ₹12 lakh DSIR-sponsored project developing cost-effective, high-strength construction materials using recycled waste plastic.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Publications and Conferences</h2>
-          <p>He has published work in leading journals such as <em>Construction and Building Materials</em> and <em>Materials Today: Proceedings</em>, and has presented at several national and international conferences.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Academic and Administrative Roles</h2>
-          <p>At RGUKT, Dr. Rao has served as:</p>
-          <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Controller of Examinations</li>
-            <li>Interim Head of the Mechanical Engineering Department</li>
-            <li>Coordinator, Innovation and Entrepreneurship Development Cell</li>
-          </ul>
-          <p class="mt-2">He has mentored student teams who achieved national recognition in events like the Smart India Hackathon.</p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research Interests</h2>
-          <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>High Strength High Performance Structural Materials</li>
-            <li>Fracture Mechanics</li>
-            <li>Polymer Matrix Composites</li>
-            <li>Non-Destructive Testing</li>
-            <li>Renewable Energy Sources</li>
-          </ul>
-        </div>
-
-        <p class="pt-4">
-          For a detailed profile, visit the 
-          <a href="https://www.rgukt.ac.in/me-faculty-chandrashekhar.html" class="text-yellow-400 underline hover:text-yellow-500">RGUKT website</a>.
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Research & Innovation</h2>
+        <p>
+          With research interests in polymer composites, fracture mechanics, and sustainable engineering, Dr. Rao consistently pushes the boundaries of innovation. Under his mentorship, Team Rudra thrives — from design validations and safety checks to real-time problem solving, his involvement ensures we stay grounded in engineering excellence while aiming high.
         </p>
       </div>
 
-      <div class="text-2xl font-bold text-center px-4 mt-10">
-        “Our faculty didn’t build the car — they built the mindset. A mindset to question, to create, and to own every inch of this machine — a mindset we, the students, turned into reality”
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Key Achievements</h2>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>Mentored RGUKT’s first Smart India Hackathon national-winning team (2019)</li>
+          <li>Guided two patent filings and mentored award-winning student startups like xpertree.com and pubvision.io</li>
+          <li>Led a ₹12 Lakh DSIR-sponsored project and contributed to the world’s first air-conditioned helmet</li>
+          <li>Facilitated 25+ international MoUs for global research exposure</li>
+          <li>Recipient of the Telangana State Best Teacher Award (2024)</li>
+        </ul>
       </div>
 
-      
-      <!-- Back Button at Bottom -->
-       <div class="flex justify-end mt-10">
-         <a href="./GuidingAthu.html" class="bg-red-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded shadow-md transition duration-300">
-           ← Back
-         </a>
-       </div>
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Leadership & Service</h2>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>Dean (R&D), Former Controller of Examinations, Advisor (Exams)</li>
+          <li>Faculty Representative – Training & Placement</li>
+          <li>Established labs, secured AICTE approvals, streamlined UG admissions</li>
+          <li>Coordinated certifications (Microsoft, SAP, CSWA), FDPs, CNC training, IEI student chapters</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold text-cyan-400 mb-2">Vision & Impact</h2>
+        <p>
+          Whether mentoring innovation, reforming systems, or inspiring students — Dr. Rao stands as a symbol of what visionary academia can achieve. His belief in student potential and commitment to excellence continues to shape not just our project, but the future of engineering at RGUKT.
+        </p>
+      </div>
+
+      <p class="pt-4 italic text-yellow-300 font-bold text-2xl">
+        “A mentor, leader, and visionary shaping future engineers through unwavering dedication and innovation.”
+      </p>
+    </div>
+
+    <!-- Back Button -->
+    <div class="flex justify-end mt-10">
+      <a href="./GuidingAthu.html" class="bg-red-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded shadow-md transition duration-300">
+        ← Back
+      </a>
     </div>
 
   </div>
-
-  <!-- Script -->
-  <script>
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      const content = document.getElementById('main-content');
-
-      setTimeout(() => {
-        loader.style.opacity = '0';
-        loader.style.transition = 'opacity 0.5s ease';
-        setTimeout(() => {
-          loader.style.display = 'none';
-          content.classList.remove('hidden');
-          setTimeout(() => {
-            content.classList.add('show');
-          }, 100);
-        }, 500);
-      }, 700);
-    });
-
-     // Hamburger Menu Toggle
-  function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('hidden');
-  }
-  </script>
 
 </body>
 </html>

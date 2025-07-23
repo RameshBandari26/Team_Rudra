@@ -339,14 +339,15 @@
 </div>
 
 
-  <div class="relative w-full h-[800px] -mt-32 z-[-1]">
-    <video autoplay muted loop class="w-full h-full object-cover">
-      <source src="./images/BMW M3 G80 _ CAP CUT _ CAR EDIT _ 4K(2K_60FPS).webm" type="video/mp4" />
-    </video>
-  </div>
+ <div class="relative w-full h-[800px] -mt-32 z-[-1] md:h-[800px] sm:h-[400px] xs:h-[300px]">
+  <video autoplay muted loop playsinline class="w-full h-full object-cover">
+    <source src="./images/car.mkv" type="video/mp4" />
+  </video>
+</div>
 
 
-<section class="bg-black py-10 flex justify-center items-center">
+
+<section class="bg-black py-10 flex justify-center items-center" data-aos="fade-up">
   <div class="flex flex-col md:flex-row bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden w-full max-w-[85%] transform transition hover:rotate-y-2 hover:shadow-cyan-500/50 relative light-glow">
 
     <div class="relative p-10 bg-gray-900 flex justify-center items-center flex-col w-full">
@@ -378,7 +379,8 @@
     </div>
 
     <div class="flex-1 p-6 text-white">
-      <h1 class="text-4xl font-bold text-[#f97316] mb-6 ml-[150px] text-left">Guidance</h1>
+      <h1 class="text-4xl font-bold text-[#f97316] mb-6 text-center md:text-left md:ml-[150px]">Guidance</h1>
+
 
       <p class="text-gray-300 text-justify leading-9 text-lg">
         Our journey is supported by the constant guidance of our faculty mentor, Dr. V. Chandra Sekhara Rao (Ph.D., IIT Madras) — Associate Professor of Mechanical Engineering at RGUKT Basar.
